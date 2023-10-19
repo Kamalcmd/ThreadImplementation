@@ -41,8 +41,8 @@ bool CounterTest::testIncrementCounter() {
     instance1.incrementCounter();
     instance2.incrementCounter();
 
-    // Increment two instances and check if the counter is 2
-    return instance2.get() == 2;
+    // Increment two instances and check if the counter is 102 because counter was incremented 100 times before executing this test case
+    return instance2.get() == 102;
 }
 
 bool CounterTest::testGetCurrentValue() {
@@ -53,8 +53,8 @@ bool CounterTest::testGetCurrentValue() {
     instance1.incrementCounter();
     instance2.incrementCounter();
 
-    // Get the counter from instance3 and check if it's 2
-    return instance3.get() == 2;
+    // Get the counter from instance3 and check if it's 104, because counter was incremented 102 times before executing this test case
+    return instance3.get() == 104;
 }
 
 

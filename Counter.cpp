@@ -3,7 +3,7 @@
 //
 
 #include "Counter.h"
-
+#include<thread>
 Counter &Counter::getInstance() {
     static Counter instance;
     return instance;
@@ -11,6 +11,7 @@ Counter &Counter::getInstance() {
 
 void Counter::incrementCounter() {
     counter_ ++;
+    std::this_thread::sleep_for(std::chrono::milliseconds(10));
 
 }
 
@@ -18,6 +19,3 @@ int Counter::get() const {
     return counter_;
 }
 
-//Counter::Counter() {
-
-//}
