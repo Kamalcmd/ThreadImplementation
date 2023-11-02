@@ -9,7 +9,9 @@
 class Counter {
 private:
     int counter_;
-    Counter(){};
+    Counter(){
+        counter_=0;
+    };
 
 public:
     //using static local vairable to ensure that the instance is

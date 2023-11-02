@@ -11,9 +11,8 @@ private:
     int n_;
 
 public:
-    IncCounter(int n);
-    void execute();
-
+    IncCounter();
+    void execute(int n);
 };
 
 
